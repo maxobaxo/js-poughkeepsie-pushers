@@ -1,0 +1,17 @@
+{
+  "name": "angular-extended",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Max Scher <maxobaxo@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
