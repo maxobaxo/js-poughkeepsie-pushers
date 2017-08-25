@@ -15,6 +15,8 @@ export class ListComponent implements OnInit {
   players: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
 
+  addingNewPlayer = false;
+
   constructor(private router: Router, private playerService: PlayerService) { }
 
   ngOnInit() {
@@ -23,6 +25,16 @@ export class ListComponent implements OnInit {
 
   goToDetailPage(clickedPlayer) {
     this.router.navigate(['players', clickedPlayer.$key]);
+  }
+
+  showAddPlayerForm() {
+    this.addingNewPlayer = true;
+  }
+
+  submitForm(name: string, age: number, position: string, hometown: string, pic: string) {
+    var newPlayer = new Player(name, age, position, hometown, pic);
+    this.playerService.addNewPlayer(newPlayer);
+    this.addingNewPlayer = false;
   }
 
 }

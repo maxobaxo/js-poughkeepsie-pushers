@@ -1,3 +1,33 @@
+<div *ngIf="currentRoute === '/admin'">
+  <div *ngIf="addingNewPlayer===false">
+    <button (click)="showAddPlayerForm()">Add New Player</button>
+  </div>
+  <div *ngIf="addingNewPlayer===true">
+    <h3>Add New Player</h3>
+    <div class="form-group">
+      <input #newName placeholder=" Name">
+    </div>
+    <div class="form-group">
+      <input #newAge placeholder=" Age">
+    </div>
+    <div class="form-group">
+      <input #newPosition placeholder=" Position">
+    </div>
+    <div class="form-group">
+      <input #newHometown placeholder=" Hometown">
+    </div>
+    <div class="form-group">
+      <input #newPic placeholder=" Picture URL">
+    </div>
+    <button (click)="submitForm(newName.value, newAge.value, newPosition.value, newHometown.value, newPic.value);
+    newName.value='';
+    newAge.value='';
+    newPosition.value='';
+    newHometown.value='';
+    newPic.value=''">Add Player</button>
+  </div>
+</div>
+
 <div *ngFor="let player of players | async">
   <h3 (click)="goToDetailPage(player)">{{player.name}}</h3>
   <div *ngIf="currentRoute === '/admin'">
