@@ -1,3 +1,7 @@
-<p>
-  player-detail works!
-</p>
+<h3>{{(playerToDisplay | async).name}}</h3>
+<img src="{{(playerToDisplay | async).pic}}" alt="Photo of {{(playerToDisplay | async).name}}" />
+<ul class="list-unstyled">
+  <li>Age: {{(playerToDisplay | async).age}}</li>
+  <li>Position: {{(playerToDisplay | async).position}}</li>
+  <li>Hometown: {{(playerToDisplay | async).hometown}}</li>
+</ul>
