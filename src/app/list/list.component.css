@@ -1,4 +1,11 @@
 img {
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+  max-width: 55%;
+}
+
+img.profile {
   max-width: 100%;
   border-radius: 10px;
   max-height: 90px;
