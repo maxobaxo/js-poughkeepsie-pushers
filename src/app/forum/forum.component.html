@@ -1,3 +1,10 @@
-<p>
-  forum works!
-</p>
+<div *ngFor="let message of messages | async | reverse">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      {{message.content}}
+    </div>
+    <div class="panel-footer">
+      {{message.author}} | {{message.date}}
+    </div>
+  </div>
+</div>

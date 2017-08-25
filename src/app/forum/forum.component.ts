@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Message } from '../message.model';
 import { Player } from '../player.model';
 import { MessageService } from '../message.service';
+import { FirebaseListObservable } from 'angularfire2/database';
+import { ReversePipe } from '../reverse.pipe';
 
 @Component({
   selector: 'app-forum',

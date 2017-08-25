@@ -14,6 +14,7 @@ import { PlayerDetailComponent } from './player-detail/player-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { EditPlayerComponent } from './edit-player/edit-player.component';
 import { ForumComponent } from './forum/forum.component';
+import { ReversePipe } from './reverse.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -30,7 +31,8 @@ export const firebaseConfig = {
     PlayerDetailComponent,
     AdminComponent,
     EditPlayerComponent,
-    ForumComponent
+    ForumComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,
