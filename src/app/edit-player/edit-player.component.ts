@@ -22,4 +22,8 @@ export class EditPlayerComponent implements OnInit {
     this.editingPlayer = true;
   }
 
+  beginEditingPlayer(selectedPlayer) {
+    this.playerService.editPlayer(selectedPlayer);
+  }
+
 }
