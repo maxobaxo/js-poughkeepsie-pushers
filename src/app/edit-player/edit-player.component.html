@@ -1,0 +1,21 @@
+<div *ngIf="editingPlayer===false">
+  <button (click)="showEditForm()">Edit</button>
+</div>
+<div *ngIf="editingPlayer===true">
+  <div class="form-group">
+    <input [(ngModel)]="selectedPlayer.name">
+  </div>
+  <div class="form-group">
+    <input [(ngModel)]="selectedPlayer.age">
+  </div>
+  <div class="form-group">
+    <input [(ngModel)]="selectedPlayer.position">
+  </div>
+  <div class="form-group">
+    <input [(ngModel)]="selectedPlayer.hometown">
+  </div>
+  <div class="form-group">
+    <input [(ngModel)]="selectedPlayer.pic">
+  </div>
+  <button (click)="beginEditingPlayer(selectedPlayer)">Submit Edits</button>
+</div>
