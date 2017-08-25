@@ -18,4 +18,13 @@ export class MessageService {
     this.messages.push(newMessage);
   }
 
+  getMessageById(messageId: string) {
+    return this.database.object('messages/' + messageId);
+  }
+
+  deleteMessage(localMessageToDelete) {
+    var messageEntryInFirebase = this.getMessageById(localMessageToDelete.$key);
+    messageEntryInFirebase.remove();
+  }
+
 }

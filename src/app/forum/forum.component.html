@@ -9,7 +9,7 @@
     <div class="form-group flex-item">
       <input #newContent placeholder=" Message">
     </div>
-    <input type="hidden" #newDate value="">
+    <input type="hidden" #newDate value="createTimestamp()">
     <button class="btn flex-item" (click)="submitForm(newAuthor.value, newContent.value, newDate.value);
     newAuthor.value='';
     newContent.value='';
@@ -25,7 +25,7 @@
       {{message.content}}
     </div>
     <div class="panel-footer">
-      {{message.author}} | {{message.date}}
+      {{message.author}} | {{message.date}} <span *ngIf="currentRoute === '/admin'">| <button class="btn" (click)="beginDeletingMessage(message)">Delete</button></span>
     </div>
   </div>
 </div>
