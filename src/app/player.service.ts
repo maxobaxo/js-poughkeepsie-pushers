@@ -22,4 +22,9 @@ export class PlayerService {
     var playerEntryInFirebase = this.getPlayerById(localEditedPlayer.$key);
     playerEntryInFirebase.update({name: localEditedPlayer.name, age: localEditedPlayer.age, position: localEditedPlayer.position, hometown: localEditedPlayer.hometown, pic: localEditedPlayer.pic});
   }
+
+  deletePlayer(localPlayerToDelete) {
+    var playerEntryInFirebase = this.getPlayerById(localPlayerToDelete.$key);
+    playerEntryInFirebase.remove();
+  }
 }
