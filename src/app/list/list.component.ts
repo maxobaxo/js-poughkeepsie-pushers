@@ -20,4 +20,8 @@ export class ListComponent implements OnInit {
     this.players = this.playerService.getPlayers();
   }
 
+  goToDetailPage(clickedPlayer) {
+    this.router.navigate(['players', clickedPlayer.$key]);
+  }
+
 }
