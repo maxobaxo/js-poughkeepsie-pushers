@@ -1,12 +1,14 @@
 img {
   max-width: 100%;
   border-radius: 10px;
+  max-height: 90px;
 }
 
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  overflow: hidden;
 }
 
 .flex-item {
@@ -32,6 +34,15 @@ input {
 
 #player-icon {
   max-width: 30px;
+}
+
+.panel {
+  max-height: 1500px;
+  overflow:hidden;
+}
+
+#float-button-right {
+  float: right;
 }
 
 /*font-family: 'Sue Ellen Francisco', cursive;

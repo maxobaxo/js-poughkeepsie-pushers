@@ -3,31 +3,42 @@
     <button class="btn" (click)="showAddPlayerForm()">Add New Player</button>
   </div>
   <div *ngIf="addingNewPlayer===true">
-    <h3>Add New Player</h3>
-    <div class="form-group">
-      <input #newName placeholder=" Name">
+    <div class="well flex-container">
+      <div class="form-group flex-item">
+        <input #newName placeholder=" Name">
+      </div>
+      <div class="form-group flex-item">
+        <input #newAge placeholder=" Age">
+      </div>
+      <div class="form-group flex-item">
+        <input #newPosition placeholder=" Position">
+      </div>
+      <div class="form-group flex-item">
+        <input #newHometown placeholder=" Hometown">
+      </div>
+      <div class="form-group flex-item">
+        <input #newPic placeholder=" Picture URL">
+      </div>
+      <div class="form-group flex-item">
+        <select class="form-control" #newIcon>
+          <option value="">Former Drug of Choice</option>
+          <option value="https://cdn0.iconfinder.com/data/icons/medicine-and-medical-equipment/512/pills_bottle_medication_pill_container_tablets_medicine_pharmacy_medical_treatment_drugs_aspirin_flat_design_icon-512.png">Pills</option>
+          <option value="http://www.cannamm.com/wp-content/themes/cannamm/images/icon-drugs-grey.png">Beer & Bud</option>
+          <option value="https://clarkscannabis.com/wp-content/uploads/Marijuana-Leaf-1.png">Marijuana</option>
+          <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Filled_Syringe_icon.svg/2000px-Filled_Syringe_icon.svg.png">Heroin</option>
+          <option value="https://d30y9cdsu7xlg0.cloudfront.net/png/28906-200.png">Wine</option>
+          <option value="https://cdn0.iconfinder.com/data/icons/pixel-perfect-at-24px-volume-1/24/1007-512.png">Lots of Stuff</option>
+          <option value="https://www.doddle.com/img/prohibited/illegal-icon.png">Anything Illegal, Really</option>
+          <option value="https://www.drugrehab.com/wp-content/themes/dr/images/icons/circle-icon-death.png.pagespeed.ce.PLdeBellLf.png">Murder</option>
+        </select>
+      </div>
+      <button class="btn flex-item" (click)="submitForm(newName.value, newAge.value, newPosition.value, newHometown.value, newPic.value, newIcon.value);
+      newName.value='';
+      newAge.value='';
+      newPosition.value='';
+      newHometown.value='';
+      newPic.value=''">Add Player</button>
     </div>
-    <div class="form-group">
-      <input #newAge placeholder=" Age">
-    </div>
-    <div class="form-group">
-      <input #newPosition placeholder=" Position">
-    </div>
-    <div class="form-group">
-      <input #newHometown placeholder=" Hometown">
-    </div>
-    <div class="form-group">
-      <input #newPic placeholder=" Picture URL">
-    </div>
-    <div class="form-group">
-      <input type="hidden" #newIcon value="">
-    </div>
-    <button class="btn" (click)="submitForm(newName.value, newAge.value, newPosition.value, newHometown.value, newPic.value, newIcon.value);
-    newName.value='';
-    newAge.value='';
-    newPosition.value='';
-    newHometown.value='';
-    newPic.value=''">Add Player</button>
   </div>
 </div>
 
