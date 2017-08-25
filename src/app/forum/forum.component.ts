@@ -13,12 +13,22 @@ import { ReversePipe } from '../reverse.pipe';
 })
 export class ForumComponent implements OnInit {
   messages: FirebaseListObservable<any[]>;
-
+  addingNewMessage = false;
 
   constructor(private messageService: MessageService) { }
 
   ngOnInit() {
     this.messages = this.messageService.getMessages();
+  }
+
+  showAddMessageForm() {
+    this.addingNewMessage = true;
+  }
+
+  submitForm(author: string, content: string, date: string) {
+    var newMessage = new Message(author, content, date);
+    this.messageService.addNewMessage(newMessage);
+    this.addingNewMessage = false;
   }
 
 }
