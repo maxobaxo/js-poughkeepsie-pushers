@@ -4,6 +4,7 @@ import { ListComponent } from './list/list.component';
 import { AboutComponent } from './about/about.component';
 import { PlayerDetailComponent } from './player-detail/player-detail.component';
 import { AdminComponent } from './admin/admin.component';
+import { ForumComponent } from './forum/forum.component';
 
 const appRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const appRoutes: Routes = [
   {
     path: 'admin',
     component: AdminComponent
+  },
+  {
+    path: 'forum',
+    component: ForumComponent
   }
 ];
 

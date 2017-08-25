@@ -62,5 +62,22 @@
     "hometown": "Santa Barbara, CA",
     "pic": "https://i.pinimg.com/originals/0a/a2/48/0aa24891269d350c41b108efedf26316.jpg",
     "icon": "https://maxcdn.icons8.com/Color/PNG/512/Healthcare/prescription_pill_bottle-512.png"
+  }],
+  "messages": [{
+    "author": "Logan Wayne",
+    "content": "You guys ready for the big game this holiday weekend?",
+    "date": "7/1/2017, 12:03 PM"
+  }, {
+    "author": "Sammy Scher",
+    "content": "You know it!",
+    "date": "7/1/2017, 01:32 PM"
+  }, {
+    "author": "Mo Scher",
+    "content": "I'm sorry everyone, but I can't play this weekend...",
+    "date": "7/1/2017, 01:46 PM"
+  }, {
+    "author": "Sammy Scher",
+    "content": "Weak, Mo!",
+    "date": "7/1/2017, 01:49 PM"
   }]
 }
