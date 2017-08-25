@@ -31,8 +31,8 @@ export class ListComponent implements OnInit {
     this.addingNewPlayer = true;
   }
 
-  submitForm(name: string, age: number, position: string, hometown: string, pic: string) {
-    var newPlayer = new Player(name, age, position, hometown, pic);
+  submitForm(name: string, age: number, position: string, hometown: string, pic: string, icon: string) {
+    var newPlayer = new Player(name, age, position, hometown, pic, icon);
     this.playerService.addNewPlayer(newPlayer);
     this.addingNewPlayer = false;
   }

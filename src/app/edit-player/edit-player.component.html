@@ -1,23 +1,28 @@
-<div *ngIf="editingPlayer===false">
-  <button (click)="showEditForm()">Edit</button>
+<div class="row">
+  <div class="col-md-6">
+    <div *ngIf="editingPlayer===false">
+      <button class="btn" (click)="showEditForm()">Edit</button>
+    </div>
+    <div *ngIf="editingPlayer===true">
+      <div class="form-group">
+        <input [(ngModel)]="selectedPlayer.name">
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="selectedPlayer.age">
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="selectedPlayer.position">
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="selectedPlayer.hometown">
+      </div>
+      <div class="form-group">
+        <input [(ngModel)]="selectedPlayer.pic">
+      </div>
+      <button class="btn" (click)="beginEditingPlayer(selectedPlayer)">Submit Edits</button>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <button class="btn" (click)="beginDeletingPlayer(selectedPlayer)">Delete</button>    
+  </div>
 </div>
-<div *ngIf="editingPlayer===true">
-  <div class="form-group">
-    <input [(ngModel)]="selectedPlayer.name">
-  </div>
-  <div class="form-group">
-    <input [(ngModel)]="selectedPlayer.age">
-  </div>
-  <div class="form-group">
-    <input [(ngModel)]="selectedPlayer.position">
-  </div>
-  <div class="form-group">
-    <input [(ngModel)]="selectedPlayer.hometown">
-  </div>
-  <div class="form-group">
-    <input [(ngModel)]="selectedPlayer.pic">
-  </div>
-  <button (click)="beginEditingPlayer(selectedPlayer)">Submit Edits</button>
-</div>
-
-<button (click)="beginDeletingPlayer(selectedPlayer)">Delete</button>

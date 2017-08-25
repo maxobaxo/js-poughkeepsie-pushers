@@ -1,6 +1,6 @@
 <div *ngIf="currentRoute === '/admin'">
   <div *ngIf="addingNewPlayer===false">
-    <button (click)="showAddPlayerForm()">Add New Player</button>
+    <button class="btn" (click)="showAddPlayerForm()">Add New Player</button>
   </div>
   <div *ngIf="addingNewPlayer===true">
     <h3>Add New Player</h3>
@@ -19,7 +19,10 @@
     <div class="form-group">
       <input #newPic placeholder=" Picture URL">
     </div>
-    <button (click)="submitForm(newName.value, newAge.value, newPosition.value, newHometown.value, newPic.value);
+    <div class="form-group">
+      <input type="hidden" #newIcon value="">
+    </div>
+    <button class="btn" (click)="submitForm(newName.value, newAge.value, newPosition.value, newHometown.value, newPic.value, newIcon.value);
     newName.value='';
     newAge.value='';
     newPosition.value='';
@@ -28,15 +31,36 @@
   </div>
 </div>
 
-<div *ngFor="let player of players | async">
-  <h3 (click)="goToDetailPage(player)">{{player.name}}</h3>
-  <div *ngIf="currentRoute === '/admin'">
-    <ul class="list-unstyled">
-      <li><img src="{{player.pic}}" alt="Photo of {{player.name}}" /></li>
-      <li>Age: {{player.age}}</li>
-      <li>Position: {{player.position}}</li>
-      <li>Hometown: {{player.hometown}}</li>
-    </ul>
-    <app-edit-player [selectedPlayer]="player"></app-edit-player>
+<div class="flex-container">
+  <div *ngFor="let player of players | async">
+    <div class="flex-item">
+      <div class="panel panel-default">
+        <div (click)="goToDetailPage(player)" class="panel-heading">
+          <h3>
+            <img id="player-icon" src="{{player.icon}}" />
+            {{player.name}}
+          </h3>
+        </div>
+        <div *ngIf="currentRoute === '/admin'">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-6">
+                <img src="{{player.pic}}" alt="Photo of {{player.name}}" />
+              </div>
+              <div class="col-md-6">
+                <ul class="list-unstyled">
+                  <li>Age: {{player.age}}</li>
+                  <li>Position: {{player.position}}</li>
+                  <li>Hometown: {{player.hometown}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <app-edit-player [selectedPlayer]="player"></app-edit-player>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

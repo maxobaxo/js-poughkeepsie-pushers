@@ -1,3 +1,38 @@
 img {
-  max-width: 25%;
+  max-width: 100%;
+  border-radius: 10px;
 }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-item {
+  /*border: 2px solid black;*/
+  margin: 10px;
+  min-width: 250px;
+  max-width: 300px;
+  word-break: normal;
+}
+
+.panel-heading {
+  text-align: center;
+  font-family: 'Rock Salt', cursive;
+}
+
+button, input {
+  font-family: 'Rock Salt', cursive;
+}
+
+input {
+  border-radius: 5px;
+}
+
+#player-icon {
+  max-width: 30px;
+}
+
+/*font-family: 'Sue Ellen Francisco', cursive;
+font-family: 'Rock Salt', cursive;*/

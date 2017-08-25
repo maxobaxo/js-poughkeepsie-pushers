@@ -1,7 +1,19 @@
-<h3>{{(playerToDisplay | async).name}}</h3>
-<img src="{{(playerToDisplay | async).pic}}" alt="Photo of {{(playerToDisplay | async).name}}" />
-<ul class="list-unstyled">
-  <li>Age: {{(playerToDisplay | async).age}}</li>
-  <li>Position: {{(playerToDisplay | async).position}}</li>
-  <li>Hometown: {{(playerToDisplay | async).hometown}}</li>
-</ul>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>{{(playerToDisplay | async).name}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{{(playerToDisplay | async).pic}}" alt="Photo of {{(playerToDisplay | async).name}}" />
+      </div>
+      <div class="col-md-6">
+        <ul class="list-unstyled">
+          <li>Age: {{(playerToDisplay | async).age}}</li>
+          <li>Position: {{(playerToDisplay | async).position}}</li>
+          <li>Hometown: {{(playerToDisplay | async).hometown}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
