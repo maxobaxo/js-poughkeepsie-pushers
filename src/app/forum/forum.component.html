@@ -4,7 +4,10 @@
 <div *ngIf="addingNewMessage===true">
   <div class="well flex-container">
     <div class="form-group flex-item">
-      <input #newAuthor placeholder=" Author">
+      <select #newAuthor>
+        <option *ngFor="let player of players | async" value="{{player.name}}">{{player.name}}</option>
+      </select>
+      <!-- <input #newAuthor placeholder=" Author"> -->
     </div>
     <div class="form-group flex-item">
       <input #newContent placeholder=" Message">

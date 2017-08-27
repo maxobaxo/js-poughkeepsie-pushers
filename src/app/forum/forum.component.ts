@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Message } from '../message.model';
+import { MessageService } from '../message.service';
 import { Router } from '@angular/router';
 import { Player } from '../player.model';
-import { MessageService } from '../message.service';
+import { PlayerService } from '../player.service';
 import { FirebaseListObservable } from 'angularfire2/database';
 import { ReversePipe } from '../reverse.pipe';
 
@@ -10,22 +11,28 @@ import { ReversePipe } from '../reverse.pipe';
   selector: 'app-forum',
   templateUrl: './forum.component.html',
   styleUrls: ['./forum.component.css'],
-  providers: [MessageService]
+  providers: [MessageService, PlayerService]
 })
+
 export class ForumComponent implements OnInit {
   messages: FirebaseListObservable<any[]>;
+  players: FirebaseListObservable<any[]>;
+
   currentRoute = this.router.url;
   addingNewMessage = false;
   timestamp = new Date();
 
-  constructor(private router: Router, private messageService: MessageService) { }
+  constructor(private router: Router, private messageService: MessageService, private playerService: PlayerService) { }
 
   ngOnInit() {
     this.messages = this.messageService.getMessages();
+    this.players = this.playerService.getPlayers();
   }
 
   showAddMessageForm() {
     this.addingNewMessage = true;
+    // console.log(this.messages);
+    // console.log(this.players);
   }
 
   submitForm(author: string, content: string, date: string) {
