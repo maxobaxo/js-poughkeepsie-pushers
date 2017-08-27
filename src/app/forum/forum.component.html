@@ -9,7 +9,7 @@
     <div class="form-group flex-item">
       <input #newContent placeholder=" Message">
     </div>
-    <input type="hidden" #newDate value="createTimestamp()">
+    <input type="hidden" #newDate value="timestamp">
     <button class="btn flex-item" (click)="submitForm(newAuthor.value, newContent.value, newDate.value);
     newAuthor.value='';
     newContent.value='';
