@@ -1,8 +1,44 @@
 # The Poughkeepsie Pushers
 An Epicodus exercise utilizing Angular 2 | 2017.08.25
 
+![homepageScreenshot](/src/assets/screenshots/homepage.png?raw=true)
+
 ## Description
 This website is used to maintain an active roster for the intramural baseball team, The Poughkeepsie Pushers. Additionally, team members are able to communicate through the site's message board.
+
+## Specifications
+* A user can view a list of all team members
+* A user can click a team member's entry to visit their profile page
+* A profile page will include more details about the team member  
+* A user can visit an 'About' page that explains what this is all about  
+* A user can rest assured all data is persisted in a database.
+* A user can view a message board where all the players have posted messages.
+* A player can add a new message  
+* A player can delete an existing message
+* An administrator can add new team members  
+* An administrator can edit existing team members  
+* An administrator can delete existing team members
+
+## Screenshots
+View Player Detail:  
+<img style="max-width: 350px" src="/src/assets/screenshots/player-detail.png">
+
+About Page:  
+<img style="max-width: 350px" src="/src/assets/screenshots/about.png">
+
+Message Board:  
+![message-board](/src/assets/screenshots/messageboard.png?raw=true)
+
+Adding a New Message:  
+<img style="max-width: 200px" src="/src/assets/screenshots/add-message-dropdown.png">
+<img style="max-width: 210px" src="/src/assets/screenshots/add-message-note.png">
+
+Add New Player:  
+<img style="max-width: 250px" src="/src/assets/screenshots/add-player-button.png">  
+<img style="max-width: 400px" src="/src/assets/screenshots/add-player-form.png">
+
+Edit Existing Player:  
+![edit-player](/src/assets/screenshots/edit-player.png?raw=true)
 
 ## Prerequisites
 You will need the following things properly installed on your computer.
@@ -67,29 +103,3 @@ You should now be able to run `$ ng serve` in terminal, and view the app at loca
 ## License
 MIT License  
 Copyright &copy; 2017 Max Scher
-
-## Planning
-1. Component Architecture
-* Root Component
-  * Navbar
-  * Footer - Admin Route
-  * List Component
-    * List All Teams (Each Team should routerLink to Team-Detail)
-
-  * About Component
-    * Explain what this site is for
-  * Team-Detail Component
-    * List Details about the selected team
-
-  * Admin Component
-    * List Component -- modified with this.router.url to include add/edit/delete teams
-
-2. Specifications
-* A user can view a list of all team members
-* A user can click a team member's entry to visit their profile page
-* A profile page will include more details about the team member
-* A user can visit an 'About' page that explains what this is all about.
-* A user can rest assured all data is persisted in a database.
-* An administrator can add new team members
-* An administrator can edit existing team members
-* An administrator can delete existing team members
