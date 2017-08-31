@@ -3,6 +3,38 @@ An Epicodus exercise utilizing Angular 2 | 2017.08.25
 
 ![homepageScreenshot](/src/assets/screenshots/homepage.png?raw=true)
 
+<details>
+<summary>View Screenshots</summary>
+  <br>
+  View Player Detail:  
+  <img style="max-width: 350px" src="/src/assets/screenshots/player-detail.png">
+  <br><br>
+
+  About Page:  
+  <img style="max-width: 350px" src="/src/assets/screenshots/about.png">
+  <br><br>
+
+  Message Board:  
+  ![message-board](/src/assets/screenshots/messageboard.png?raw=true)
+  <br><br>
+
+  Adding a New Message:  
+  <img style="max-width: 200px" src="/src/assets/screenshots/add-message-dropdown.png">
+  <img style="max-width: 210px" src="/src/assets/screenshots/add-message-note.png">
+  <br><br>
+
+  Add New Player:  
+  <img style="max-width: 250px" src="/src/assets/screenshots/add-player-button.png">  
+  <br>
+  <img style="max-width: 400px" src="/src/assets/screenshots/add-player-form.png">
+  <br><br>
+
+  Edit Existing Player:  
+  ![edit-player](/src/assets/screenshots/edit-player.png?raw=true)
+  <br>
+</details>
+
+
 ## Description
 This website is used to maintain an active roster for the intramural baseball team, The Poughkeepsie Pushers. Additionally, team members are able to communicate through the site's message board.
 
@@ -18,27 +50,6 @@ This website is used to maintain an active roster for the intramural baseball te
 * An administrator can add new team members  
 * An administrator can edit existing team members  
 * An administrator can delete existing team members
-
-## Screenshots
-View Player Detail:  
-<img style="max-width: 350px" src="/src/assets/screenshots/player-detail.png">
-
-About Page:  
-<img style="max-width: 350px" src="/src/assets/screenshots/about.png">
-
-Message Board:  
-![message-board](/src/assets/screenshots/messageboard.png?raw=true)
-
-Adding a New Message:  
-<img style="max-width: 200px" src="/src/assets/screenshots/add-message-dropdown.png">
-<img style="max-width: 210px" src="/src/assets/screenshots/add-message-note.png">
-
-Add New Player:  
-<img style="max-width: 250px" src="/src/assets/screenshots/add-player-button.png">  
-<img style="max-width: 400px" src="/src/assets/screenshots/add-player-form.png">
-
-Edit Existing Player:  
-![edit-player](/src/assets/screenshots/edit-player.png?raw=true)
 
 ## Prerequisites
 You will need the following things properly installed on your computer.
