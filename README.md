@@ -1,6 +1,8 @@
 # The Poughkeepsie Pushers
 An Epicodus exercise utilizing Angular 2 | 2017.08.25
 
+This website has been deployed for easy viewing: [The Poughkeepsie Pushers](https://js-poughkeepsie-pushers.firebaseapp.com/)
+
 ![homepageScreenshot](/src/assets/screenshots/homepage.png?raw=true)
 
 <details>
@@ -36,7 +38,7 @@ An Epicodus exercise utilizing Angular 2 | 2017.08.25
 
 
 ## Description
-This website is used to maintain an active roster for the intramural baseball team, The Poughkeepsie Pushers. Additionally, team members are able to communicate through the site's message board. View deployed project here: [The Poughkeepsie Pushers](https://js-poughkeepsie-pushers.firebaseapp.com/)
+This website is used to maintain an active roster for the intramural baseball team, The Poughkeepsie Pushers. Additionally, team members are able to communicate through the site's message board.
 
 ## Specifications
 * A user can view a list of all team members
