@@ -58,5 +58,10 @@ input {
 .player-detail {
   cursor: pointer;
 }
+
+.player-name:hover {
+  text-decoration: underline;
+}
+
 /*font-family: 'Sue Ellen Francisco', cursive;
 font-family: 'Rock Salt', cursive;*/
