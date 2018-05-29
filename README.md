@@ -111,7 +111,7 @@ Add the following to your .gitignore file...
 * Click the three vertical dots on the right side and select "Import JSON", click BROWSE, navigate to and select the mock-data.json file in the main project directory and click import.
 * Click the RULES button in your firebase database and set read and write to "true" if you want others to be able to interact with the data.
 
-You should now be able to run `$ ng serve` in terminal, and view the app at localhost:4200 in your browser.
+You should now be able to run `$ npm start` in terminal, and view the app at localhost:4200 in your browser.
 
 ## License
 MIT License  
