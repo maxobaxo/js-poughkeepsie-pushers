@@ -43,6 +43,7 @@ input {
 
 #player-icon {
   max-width: 30px;
+  margin-bottom: 20px;
 }
 
 .panel {
