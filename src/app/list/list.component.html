@@ -48,8 +48,7 @@
       <div class="panel panel-default">
         <div (click)="goToDetailPage(player)" class="panel-heading">
           <h3>
-            <img id="player-icon" src="{{player.icon}}" />
-            {{player.name}}
+            <img id="player-icon" src="{{player.icon}}" /> {{player.name}}
           </h3>
         </div>
         <div *ngIf="currentRoute === '/admin'">

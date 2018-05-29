@@ -28,11 +28,13 @@ img.profile {
 
 .panel-heading {
   text-align: center;
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
+  cursor: pointer;
 }
 
-button, input {
-  font-family: 'Rock Salt', cursive;
+button,
+input {
+  font-family: "Rock Salt", cursive;
 }
 
 input {
@@ -45,12 +47,15 @@ input {
 
 .panel {
   max-height: 1500px;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 #float-button-right {
   float: right;
 }
 
+.player-detail {
+  cursor: pointer;
+}
 /*font-family: 'Sue Ellen Francisco', cursive;
 font-family: 'Rock Salt', cursive;*/
