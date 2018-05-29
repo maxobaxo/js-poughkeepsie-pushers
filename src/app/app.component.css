@@ -26,3 +26,7 @@ footer {
 h3 {
   float: right;
 }
+
+#title-link:focus {
+  outline: 0;
+}
